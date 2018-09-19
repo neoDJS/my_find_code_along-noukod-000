@@ -1,7 +1,9 @@
 require 'pry'
 
 def my_find(collection)
-  collection.length.times do |i|
+  i = 0
+  while i < collection.length do
     return collection[i] if yield(collection[i])
+    i += 1
   end
 end
